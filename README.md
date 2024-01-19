@@ -48,7 +48,35 @@
     - 500 Internal Server Error: внутренняя ошибка сервера.
 
 ## Сборка и Запуск
+### Для сборки проекта вам понадобятся:
+    - java 17
+    - maven
+    - git
 1. ### **Клонирование репозитория:**
- 
+     ```bash
+     git clone https://github.com/IvanKuleshov1/TestProjectT1Consulting.git
+     ```
+     ```bash
+     cd project_path
+     ```
+
 2. ### **Сборка проекта:**
+   ```bash
+     mvn clean install
+   ```
+3. ### **Запуск приложения:**
+    ```java
+    java -jar target/TestProjectT1Consulting-0.0.1-SNAPSHOT.jar
+    ```
+- ### Для тестирования через curl 
+    ```bash
+    curl -X POST -H "Content-Type: application/json" -d '{"input": "your_text"}' http://localhost:8080/chars/frequency
+    ```
+- ### Для тестирования через Postman 
+    ```bash
+    http://localhost:8080/chars/frequency
+    ```
+      - Body
+          - raw
+          - Text
 
